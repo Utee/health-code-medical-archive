@@ -1,0 +1,21 @@
+<!-- view_qrcode.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View QR Code</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>View QR Code</h2>
+    <!-- Display the QR code here -->
+    <img src="{{ url_for('static', filename='qrcodes/' + user.username + '.png') }}" alt="QR Code">
+    
+    <a href="{{ url_for('doctor_dashboard') }}" class="btn btn-success mr-2">Back to Dashboard</a>
+</div>
+
+</body>
+</html>
