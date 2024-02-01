@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Login</h2>
+    <form method="post" action="{{ url_for('login') }}">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" name="username" id="username" placeholder="Enter username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Enter password">
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" name="is_doctor" id="is_doctor">
+            <label class="form-check-label" for="is_doctor">
+                Login as Doctor
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+
+         <!-- Button for patient login -->
+    <a href="{{ url_for('patient_login') }}" class="btn btn-secondary">Login as Patient</a>
+    </form>
+
+   
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-{{ messages[0].category }}">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+    {% endwith %}
+</div>
+
+</body>
+</html>

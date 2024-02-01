@@ -1,0 +1,74 @@
+<!-- dashboard_doctor.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Doctor Dashboard</h2>
+    <!-- Display doctor information here -->
+
+    <h3>Patients</h3>
+    <!-- Display a list of patients with options to generate QR code and send SMS -->
+
+    {% block content %}
+        {% if users %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Name</th>
+                        <!-- Add other fields as needed -->
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                        <tr>
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.name }}</td>
+                            <!-- Add other fields as needed -->
+                            <td>
+                                <a href="{{ url_for('generate_qrcode', username=user.username) }}" class="btn btn-primary">Generate QR Code</a>
+                                <a href="{{ url_for('send_sms', user_id=user.id) }}" class="btn btn-secondary">Send SMS</a>
+                               <!-- Modify the QR code image tag in dashboard_doctor.html -->
+                                <img id="qrcode" src="{{ url_for('static', filename='qrcodes/' + user.username + '.png') }}" alt="QR Code" width="50" height="50">
+
+                                <a href="#" class="btn btn-info" onclick="printQRCode()">Print QR Code</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No users available.</p>
+        {% endif %}
+    {% endblock %}
+
+    <a href="{{ url_for('doctor_create_user') }}" class="btn btn-primary">Create User</a>
+    <a href="{{ url_for('doctor_view_qrcode') }}" class="btn btn-primary">View QR Code</a>
+    <a href="{{ url_for('create_appointment_form') }}" class="btn btn-primary">Create Appointment</a>
+</div>
+
+
+
+<script>
+    function printQRCode() {
+        var printWindow = window.open('', '_blank');
+        printWindow.document.write('<html><head><title>Print QR Code</title></head><body>');
+        printWindow.document.write('<img src="' + document.getElementById('qrcode').src + '" alt="QR Code">');
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+        printWindow.print();
+    }
+</script>
+
+</body>
+</html>

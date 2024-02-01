@@ -1,0 +1,128 @@
+{
+    "users": [
+        {
+            "username": "user1",
+            "email": "user1@example.com",
+            "name": "User One",
+            "password": "password1",
+            "age": 25,
+            "gender": "Male",
+            "next_of_kin": "Next of Kin One",
+            "next_appointment": "2023-12-01",
+            "prescription": "Prescription for User One"
+        },
+        {
+            "username": "user2",
+            "email": "user2@example.com",
+            "name": "User Two",
+            "password": "password2",
+            "age": 30,
+            "gender": "Female",
+            "next_of_kin": "Next of Kin Two",
+            "next_appointment": "2023-12-15",
+            "prescription": "Prescription for User Two"
+        },
+        {
+            "username": "user3",
+            "email": "user3@example.com",
+            "name": "User Three",
+            "password": "password3",
+            "age": 28,
+            "gender": "Male",
+            "next_of_kin": "Next of Kin Three",
+            "next_appointment": "2023-11-28",
+            "prescription": "Prescription for User Three"
+        },
+        {
+            "username": "user4",
+            "email": "user4@example.com",
+            "name": "User Four",
+            "password": "password4",
+            "age": 35,
+            "gender": "Female",
+            "next_of_kin": "Next of Kin Four",
+            "next_appointment": "2023-12-05",
+            "prescription": "Prescription for User Four"
+        },
+        {
+            "username": "user5",
+            "email": "user5@example.com",
+            "name": "User Five",
+            "password": "password5",
+            "age": 22,
+            "gender": "Male",
+            "next_of_kin": "Next of Kin Five",
+            "next_appointment": "2023-12-10",
+            "prescription": "Prescription for User Five"
+        },
+        {
+            "username": "user6",
+            "email": "user6@example.com",
+            "name": "User Six",
+            "password": "password6",
+            "age": 29,
+            "gender": "Female",
+            "next_of_kin": "Next of Kin Six",
+            "next_appointment": "2023-12-18",
+            "prescription": "Prescription for User Six"
+        },
+        {
+            "username": "user7",
+            "email": "user7@example.com",
+            "name": "User Seven",
+            "password": "password7",
+            "age": 32,
+            "gender": "Male",
+            "next_of_kin": "Next of Kin Seven",
+            "next_appointment": "2023-11-27",
+            "prescription": "Prescription for User Seven"
+        },
+        {
+            "username": "user8",
+            "email": "user8@example.com",
+            "name": "User Eight",
+            "password": "password8",
+            "age": 27,
+            "gender": "Female",
+            "next_of_kin": "Next of Kin Eight",
+            "next_appointment": "2023-12-08",
+            "prescription": "Prescription for User Eight"
+        },
+        {
+            "username": "user9",
+            "email": "user9@example.com",
+            "name": "User Nine",
+            "password": "password9",
+            "age": 31,
+            "gender": "Male",
+            "next_of_kin": "Next of Kin Nine",
+            "next_appointment": "2023-12-12",
+            "prescription": "Prescription for User Nine"
+        },
+        {
+            "username": "user10",
+            "email": "user10@example.com",
+            "name": "User Ten",
+            "password": "password10",
+            "age": 26,
+            "gender": "Female",
+            "next_of_kin": "Next of Kin Ten",
+            "next_appointment": "2023-11-30",
+            "prescription": "Prescription for User Ten"
+        }
+    ],
+    "doctors": [],
+    "patients": [
+        {
+            "username": "user34",
+            "email": "user34@gmail.com",
+            "name": "Jane Smith",
+            "password": "user34_password",
+            "age": "34",
+            "gender": "female",
+            "next_of_kin": "Peter Richh",
+            "next_appointment": "23/09/2023",
+            "prescription": "Garlic and ginger"
+        }
+    ]
+}
