@@ -1,0 +1,7 @@
+admin login
+admin_username = 'admin'
+admin_password = 'admin_password'
+
+doctors login
+username: 'doctor1', 'password': 'doctor1_password'
+username: 'doctor2', 'password': 'doctor2_password'
